@@ -129,7 +129,7 @@ public class SampleActivity extends Activity {
 
     private UpdateConfig createNewConfig() {
         return UpdateConfig.createConfig()
-                .setUrl("https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/update.json")
+                .setUrl("http://192.168.15.36/Update/update.json")
                 .setUpdateParser(new UpdateParser() {
                     @Override
                     public Update parse(String httpResponse) throws Exception {
@@ -144,9 +144,9 @@ public class SampleActivity extends Activity {
                         // 此apk包的更新内容
                         update.setUpdateContent(object.optString("update_content"));
                         // 此apk包是否为强制更新
-                        update.setForced(true);
+                        update.setForced(false);
                         // 是否显示忽略此次版本更新按钮
-                        update.setIgnore(object.optBoolean("ignore_able",false));
+                        update.setIgnore(object.optBoolean("ignore_able",true));
                         update.setMd5(object.optString("md5"));
                         return update;
                     }
