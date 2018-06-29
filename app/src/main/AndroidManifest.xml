@@ -6,7 +6,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jason.framework.updateplugin">
+    package="com.jason.framework.updatedemo">
 
     <application
         android:name=".MyApplication"
@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.Light">
-        <activity android:name="com.jason.framework.updateplugin.SampleActivity">
+        <activity android:name="com.jason.framework.updatedemo.SampleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

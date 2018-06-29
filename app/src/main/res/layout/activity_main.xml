@@ -21,63 +21,63 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.jason.framework.updateplugin.widget.CheckedView
+            <com.jason.framework.updatedemo.widget.CheckedView
                 android:id="@+id/create_new_config"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:subtitle="@string/create_new_config_subtitle"
                 app:title="@string/create_new_config_title" />
 
-            <com.jason.framework.updateplugin.widget.CheckedView
+            <com.jason.framework.updatedemo.widget.CheckedView
                 android:id="@+id/download_worker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:subtitle="@string/download_worker_subtitle"
                 app:title="@string/download_worker_title" />
 
-            <com.jason.framework.updateplugin.widget.CheckedView
+            <com.jason.framework.updatedemo.widget.CheckedView
                 android:id="@+id/update_strategy"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:subtitle="@string/update_strategy_subtitle"
                 app:title="@string/udpate_strategy_title" />
 
-            <com.jason.framework.updateplugin.widget.CheckedView
+            <com.jason.framework.updatedemo.widget.CheckedView
                 android:id="@+id/has_update_notice"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:subtitle="@string/has_update_notice_subtitle"
                 app:title="@string/has_update_notice_title" />
 
-            <com.jason.framework.updateplugin.widget.CheckedView
+            <com.jason.framework.updatedemo.widget.CheckedView
                 android:id="@+id/file_creator"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:subtitle="@string/file_creator_subtitle"
                 app:title="@string/file_creator_title" />
 
-            <com.jason.framework.updateplugin.widget.CheckedView
+            <com.jason.framework.updatedemo.widget.CheckedView
                 android:id="@+id/download_notice"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:subtitle="@string/download_notice_subtitle"
                 app:title="@string/download_notice_title" />
 
-            <com.jason.framework.updateplugin.widget.CheckedView
+            <com.jason.framework.updatedemo.widget.CheckedView
                 android:id="@+id/check_worker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:subtitle="@string/check_worker_subtitle"
                 app:title="@string/check_worker_title" />
 
-            <com.jason.framework.updateplugin.widget.CheckedView
+            <com.jason.framework.updatedemo.widget.CheckedView
                 android:id="@+id/download_complete_notice"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:subtitle="@string/download_complete_notice_subtitle"
                 app:title="@string/download_complete_notice_title">
 
-            </com.jason.framework.updateplugin.widget.CheckedView>
+            </com.jason.framework.updatedemo.widget.CheckedView>
 
             <Button
                 android:id="@+id/start_update"
