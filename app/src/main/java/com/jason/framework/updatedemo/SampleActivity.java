@@ -129,7 +129,7 @@ public class SampleActivity extends Activity {
 
     private UpdateConfig createNewConfig() {
         return UpdateConfig.createConfig()
-                .setUrl("http://192.168.15.36/Update/update.json")
+                .setUrl("https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/update.json")
                 .setUpdateParser(new UpdateParser() {
                     @Override
                     public Update parse(String httpResponse) throws Exception {

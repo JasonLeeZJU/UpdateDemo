@@ -25,7 +25,8 @@ public class MyApplication extends Application {
         ToastTool.init(this);
         UpdateConfig.getConfig()
                 // 必填：数据更新接口,url与checkEntity两种方式任选一种填写
-                .setUrl("https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/update.json")
+                //https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/update.json
+                .setUrl("https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/update.json")
 //                .setCheckEntity(new CheckEntity().setMethod(HttpMethod.GET).setUrl("http://www.baidu.com"))
                 // 必填：用于从数据更新接口获取的数据response中。解析出Update实例。以便框架内部处理
                 .setUpdateParser(new UpdateParser() {
@@ -47,7 +48,7 @@ public class MyApplication extends Application {
                         // 此apk包是否为强制更新
                         update.setForced(false);
                         // 是否显示忽略此次版本更新按钮
-                        update.setIgnore(object.optBoolean("ignore_able",false));
+                        update.setIgnore(object.optBoolean("ignore_able",true));
                         return update;
                     }
                 })
