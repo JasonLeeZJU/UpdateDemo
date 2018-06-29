@@ -87,16 +87,16 @@
                 android:text="@string/start_update" />
 
             <Button
-                android:id="@+id/start_daemon_update"
+                android:id="@+id/start_background_update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/start_daemon_update" />
+                android:text="@string/start_background_update" />
 
             <Button
-                android:id="@+id/stop_daemon_update"
+                android:id="@+id/stop_background_update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/stop_daemon_update" />
+                android:text="@string/stop_background_update" />
 
         </LinearLayout>
     </ScrollView>

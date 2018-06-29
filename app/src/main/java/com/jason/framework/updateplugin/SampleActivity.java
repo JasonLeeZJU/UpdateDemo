@@ -68,7 +68,7 @@ public class SampleActivity extends Activity {
                 });
     }
 
-    @OnClick(R.id.start_daemon_update)
+    @OnClick(R.id.start_background_update)
     void onDaemonStartClick() {
         daemonTask = createBuilder();
         daemonTask.checkWithDaemon(5);// 后台更新时间间隔设置为5秒。
@@ -79,7 +79,7 @@ public class SampleActivity extends Activity {
         createBuilder().check();
     }
 
-    @OnClick(R.id.stop_daemon_update)
+    @OnClick(R.id.stop_background_update)
     void onStopDaemonClick() {
         if (daemonTask != null) {
             daemonTask.stopDaemon();
