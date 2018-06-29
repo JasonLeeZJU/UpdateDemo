@@ -1,0 +1,9 @@
+.gradle
+/local.properties
+/.idea
+/freeline
+/freeline.py
+.DS_Store
+/build
+/captures
+*.iml

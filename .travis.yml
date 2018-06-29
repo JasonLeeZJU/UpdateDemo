@@ -1,0 +1,19 @@
+language: android
+jdk: oraclejdk8
+sudo: false
+
+android:
+  components:
+    - platform-tools
+    - tools
+    - build-tools-25.0.0
+    - android-25
+    - sys-img-armeabi-v7a-android-25
+    - extra-android-m2repository
+
+  licenses:
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+
+script: ./gradlew clean assemble --stacktrace
