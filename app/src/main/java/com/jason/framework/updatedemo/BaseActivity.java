@@ -90,8 +90,11 @@ public class BaseActivity extends Activity {
     }
 
     private UpdateConfig createNewConfig() {
-        return UpdateConfig.createConfig().setUrl("https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/update.json")
-        .setUpdateParser(new UpdateParser() {
+        return UpdateConfig.createConfig()
+                // .setUrl("https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/update.json")
+                //  .setUrl("https://rawgit.com/JasonLeeZJU/UpdateDemo/master/update.json")
+                .setUrl("http://192.168.15.36/Update/update.json")
+                .setUpdateParser(new UpdateParser() {
             @Override
             public Update parse(String httpResponse) throws Exception {
                 JSONObject jsonObject = new JSONObject(httpResponse);
