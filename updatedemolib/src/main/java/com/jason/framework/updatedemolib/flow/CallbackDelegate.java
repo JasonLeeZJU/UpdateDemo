@@ -23,7 +23,7 @@ import java.io.File;
 /**
  * 更新回调的代理类，用于统一进行回调分发。并打印日志辅助调试
  *
- * @author JasonLee on 2018/9/26.
+ * @author JasonLee on 2018/6/26.
  */
 public final class CallbackDelegate implements CheckCallback, DownloadCallback {
 
