@@ -1,8 +1,8 @@
-{
-  "update_url"      : "https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/update_plugin.apk",
-  "update_content"  : "你有新的版本需要更新",
-  "update_ver_code" : 10,
-  "update_ver_name" : "10.00",
-  "ignore_able"     : true,
-  "md5"             : "211117732C307BEA1188965E6CA41443"
+﻿{
+	"update_ver_name": "2.0",
+	"update_ver_code": 2,
+	"update_content": "修复多项BUG！",
+	"udpate_url": "http://192.168.15.36/Update/FaceKarePad.apk",
+	"ignore_able": true,
+	"md5":"1B2B717B7320690CF4E6F29F18B334CB"
 }
