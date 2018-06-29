@@ -1,3 +1,10 @@
+
+/*
+ * Copyright (c) 2018.
+ * JasonLee
+ * OpenAccess All rights reserved.
+ */
+
 package com.jason.framework.updateplugin.widget;
 
 import android.annotation.SuppressLint;
@@ -5,10 +12,6 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
-
-/**
- * Created by Jason on 2017/3/2.
- */
 
 public class ToastTool {
     static Handler mainHandler = new Handler(Looper.getMainLooper());

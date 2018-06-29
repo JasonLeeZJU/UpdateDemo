@@ -1,10 +1,17 @@
+
+/*
+ * Copyright (c) 2018.
+ * JasonLee
+ * OpenAccess All rights reserved.
+ */
+
 package com.jason.framework.updatepluginlib.util;
 
 import android.util.Log;
 
 /**
  * 统一日志打印
- * @author JasonLee on 2018/2/9.
+ * @author JasonLee on 2018/6/9.
  */
 public final class L {
     private static final String TAG = "UpdatePluginLog";

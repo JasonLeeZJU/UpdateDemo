@@ -1,3 +1,10 @@
+
+/*
+ * Copyright (c) 2018.
+ * JasonLee
+ * OpenAccess All rights reserved.
+ */
+
 package com.jason.framework.updateplugin.update;
 
 import android.content.Context;
@@ -10,7 +17,7 @@ import com.jason.framework.updatepluginlib.model.Update;
 import java.io.File;
 
 /**
- * @author JasonLee on 2018/1/9.
+ * @author JasonLee on 2018/6/9.
  */
 
 public class ToastCallback implements CheckCallback, DownloadCallback {

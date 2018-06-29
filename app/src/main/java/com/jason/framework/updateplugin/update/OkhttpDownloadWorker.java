@@ -1,3 +1,10 @@
+
+/*
+ * Copyright (c) 2018.
+ * JasonLee
+ * OpenAccess All rights reserved.
+ */
+
 package com.jason.framework.updateplugin.update;
 
 import com.jason.framework.updatepluginlib.base.DownloadWorker;

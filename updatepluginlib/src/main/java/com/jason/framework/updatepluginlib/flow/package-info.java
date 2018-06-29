@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2018.
+ * JasonLee
+ * OpenAccess All rights reserved.
+ */
+
 /**
  * 此包下用于放置更新流程中的关键更新节点实现类，如：
  * <ol>

@@ -1,3 +1,10 @@
+
+/*
+ * Copyright (c) 2018.
+ * JasonLee
+ * OpenAccess All rights reserved.
+ */
+
 package com.jason.framework.updateplugin;
 
 import android.app.Application;
@@ -8,9 +15,6 @@ import com.jason.framework.updatepluginlib.UpdateConfig;
 import com.jason.framework.updatepluginlib.model.Update;
 import com.jason.framework.updatepluginlib.base.UpdateParser;
 
-/**
- * @author Administrator
- */
 public class MyApplication extends Application {
 
     @Override
@@ -47,7 +51,7 @@ public class MyApplication extends Application {
                         return update;
                     }
                 })
-                // TODO: 2016/5/11 除了以上两个参数为必填。以下的参数均为非必填项。
+                // TODO: 2018/6/11 除了以上两个参数为必填。以下的参数均为非必填项。
                 // 检查更新接口是否有新版本更新的回调。
 //                .setCheckCallback(callback)
                 // apk下载的回调
@@ -65,7 +69,7 @@ public class MyApplication extends Application {
                 .setCheckWorker(new CheckWorker() {
                     @Override
                     protected String check(CheckEntity setUrl) throws Exception {
-                        // TODO: 2016/5/11 此处运行于子线程。在此进行更新接口访问
+                        // TODO: 2018/6/11 此处运行于子线程。在此进行更新接口访问
                         return null;
                     }
                 })
@@ -73,14 +77,14 @@ public class MyApplication extends Application {
                 .setDownloadWorker(new DownloadWorker() {
                     @Override
                     protected void download(String setUrl, File file) throws Exception {
-                        // TODO: 2016/5/11 此处运行于子线程，在此进行文件下载任务
+                        // TODO: 2018/6/11 此处运行于子线程，在此进行文件下载任务
                     }
                 })
                 // 自定义下载文件缓存,默认下载至系统自带的缓存目录下
                 .setFileCreator(new FileCreator() {
                     @Override
                     public File create(String versionName) {
-                        // TODO: 2016/5/11 versionName 为解析的Update实例中的update_url数据。在些可自定义下载文件缓存路径及文件名。放置于File中
+                        // TODO: 2018/6/11 versionName 为解析的Update实例中的update_url数据。在些可自定义下载文件缓存路径及文件名。放置于File中
                         return null;
                     }
                 })
@@ -108,7 +112,7 @@ public class MyApplication extends Application {
                 .setCheckNotifier(new CheckNotifier() {
                     @Override
                     public Dialog create(Update update, Activity context) {
-                        // TODO: 2016/5/11 此处为检查出有新版本需要更新时的回调。运行于主线程，在此进行更新Dialog的创建
+                        // TODO: 2018/6/11 此处为检查出有新版本需要更新时的回调。运行于主线程，在此进行更新Dialog的创建
                         return null;
                     }
                 })
@@ -116,8 +120,8 @@ public class MyApplication extends Application {
                 .setDownloadNotifier(new DownloadNotifier() {
                     @Override
                     public DownloadCallback create(Update update, Activity activity) {
-                        // TODO: 2016/5/11 此处为正在下载APK时的回调。运行于主线程。在此进行Dialog自定义与显示操作。
-                        // TODO: 2016/5/11 需要在此创建并返回一个UpdateDownloadCB回调。用于对Dialog进行更新。
+                        // TODO: 2018/6/11 此处为正在下载APK时的回调。运行于主线程。在此进行Dialog自定义与显示操作。
+                        // TODO: 2018/6/11 需要在此创建并返回一个UpdateDownloadCB回调。用于对Dialog进行更新。
                         return null;
                     }
                 })
@@ -125,7 +129,7 @@ public class MyApplication extends Application {
                 .setInstallNotifier(new InstallNotifier() {
                     @Override
                     public Dialog create(Update update, String s, Activity activity) {
-                        // TODO: 2016/5/11 此处为下载APK完成后的回调。运行于主线程。在此创建Dialog
+                        // TODO: 2018/6/11 此处为下载APK完成后的回调。运行于主线程。在此创建Dialog
                         return null;
                     }
                 })*/;
