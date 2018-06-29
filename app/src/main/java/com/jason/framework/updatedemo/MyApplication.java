@@ -25,8 +25,9 @@ public class MyApplication extends Application {
         ToastTool.init(this);
         UpdateConfig.getConfig()
                 // 必填：数据更新接口,url与checkEntity两种方式任选一种填写
-                //https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/update.json
-                .setUrl("https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/update.json")
+ //           .setUrl("https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/update.json")
+   //              .setUrl("https://rawgit.com/JasonLeeZJU/UpdateDemo/master/update.json")
+                .setUrl("http://192.168.15.36/Update/update.json")
 //                .setCheckEntity(new CheckEntity().setMethod(HttpMethod.GET).setUrl("http://www.baidu.com"))
                 // 必填：用于从数据更新接口获取的数据response中。解析出Update实例。以便框架内部处理
                 .setUpdateParser(new UpdateParser() {
