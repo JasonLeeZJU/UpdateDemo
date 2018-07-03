@@ -1,4 +1,4 @@
-# UpdatePlugin [![](https://jitpack.io/v/yjfnypeu/UpdatePlugin.svg)](https://jitpack.io/#yjfnypeu/UpdatePlugin)
+# UpdateDemo
 
 
 UpdatePlugin是一款用来进行app更新升级的框架。
