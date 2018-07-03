@@ -1,10 +1,10 @@
 # UpdateDemo
 
 
-UpdatePlugin是一款用来进行app更新升级的框架。
+UpdateDemo是一款用来进行app更新升级的框架。
 
 ### 原理
-UpdatePlugin主要基于对整个更新流程的梳理，针对更新流程中可能的被用户需要定制的节点。提供对应的定制接口出来提供用户进行各种定制；
+UpdateDemo主要基于对整个更新流程的梳理，针对更新流程中可能的被用户需要定制的节点。提供对应的定制接口出来提供用户进行各种定制；
 
 为了方便用户直接使用，对于更新流程中非用户必须定制的接口。框架也对各个节点实现了一套自身默认的定制接口。做到拿来即用的。
 
@@ -32,16 +32,6 @@ allprojects {
     repositories {
         maven { url 'https://jitpack.io' }
     }
-}
-```
-- 在要使用的项目的build.gradle中。添加依赖：
-
-LastestVersion= [![](https://jitpack.io/v/yjfnypeu/UpdatePlugin.svg)](https://jitpack.io/#yjfnypeu/UpdatePlugin)
-
-```
-dependencies {
-    ...
-    compile "com.github.yjfnypeu:UpdatePlugin:$LastestVersion"
 }
 ```
 
