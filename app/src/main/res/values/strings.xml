@@ -34,4 +34,7 @@
     <string name="download_complete_notice_subtitle">定制在通知栏显示下载完成消息通知</string>
     <string name="download_complete_notice_title">选择下载完成后的弹窗提示</string>
     <string name="stop_background_update">停止后台任务</string>
+    <string name="update_json_field_name">stable_update</string>
+    <string name="json_update_apk_address">update_url</string>
+    <string name="jason_udpate_json_address"></string>
 </resources>

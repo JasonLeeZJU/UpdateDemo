@@ -8,12 +8,15 @@
 package com.jason.framework.updatedemo;
 
 import android.app.Application;
+import android.util.Log;
 
 import org.json.JSONObject;
 import com.jason.framework.updatedemo.widget.ToastTool;
 import com.jason.framework.updatedemolib.UpdateConfig;
 import com.jason.framework.updatedemolib.model.Update;
 import com.jason.framework.updatedemolib.base.UpdateParser;
+
+import static android.content.ContentValues.TAG;
 
 public class MyApplication extends Application {
 
@@ -24,32 +27,49 @@ public class MyApplication extends Application {
         // 对于没传的参数，会默认使用UpdateConfig中的全局配置
         ToastTool.init(this);
         UpdateConfig.getConfig()
-                // 必填：数据更新接口,url与checkEntity两种方式任选一种填写
- //           .setUrl("https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/update.json")
-   //              .setUrl("https://rawgit.com/JasonLeeZJU/UpdateDemo/master/update.json")
+           // .setUrl("https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/update.json")
+           // .setUrl("https://rawgit.com/JasonLeeZJU/UpdateDemo/master/update.json")
                 .setUrl("http://192.168.15.36/Update/update.json")
-//                .setCheckEntity(new CheckEntity().setMethod(HttpMethod.GET).setUrl("http://www.baidu.com"))
-                // 必填：用于从数据更新接口获取的数据response中。解析出Update实例。以便框架内部处理
+    // .setCheckEntity(new CheckEntity().setMethod(HttpMethod.GET).setUrl("http://192.168.15.36"))
+
                 .setUpdateParser(new UpdateParser() {
                     @Override
-                    public Update parse(String response) throws Exception{
-                        /* 此处根据上面url或者checkEntity设置的检查更新接口的返回数据response解析出
-                         * 一个update对象返回即可。更新启动时框架内部即可根据update对象的数据进行处理
-                         */
-                        JSONObject object = new JSONObject(response);
+                    public Update parse(String httpResponse) throws Exception{
+
+                        JSONObject jsonObject = new JSONObject(httpResponse);
                         Update update = new Update();
+
+
                         // 此apk包的下载地址
-                        update.setUpdateUrl(object.optString("update_url"));
+                        update.setUpdateUrl(jsonObject.optString("update_url"));
                         // 此apk包的版本号
-                        update.setVersionCode(object.optInt("update_ver_code"));
+                        update.setVersionCode(jsonObject.optInt("update_ver_code"));
                         // 此apk包的版本名称
-                        update.setVersionName(object.optString("update_ver_name"));
+                        update.setVersionName(jsonObject.optString("update_ver_name"));
                         // 此apk包的更新内容
-                        update.setUpdateContent(object.optString("update_content"));
+                        update.setUpdateContent(jsonObject.optString("update_content"));
                         // 此apk包是否为强制更新
                         update.setForced(false);
                         // 是否显示忽略此次版本更新按钮
-                        update.setIgnore(object.optBoolean("ignore_able",true));
+                        update.setIgnore(jsonObject.optBoolean("ignore_able",true));
+                        //md5 用于文件校验
+                        update.setMd5(jsonObject.optString("md5"));
+
+
+                        /*
+                        JSONObject jsonObject1 = jsonObject.getJSONArray(updateAddress
+                                .getUpdate_json_field_name()).getJSONObject(updateAddress
+                                .getUpdate_json_field_index());
+
+                        update.setUpdateUrl(jsonObject1.optString("update_url"));
+                        update.setVersionCode(jsonObject1.optInt("update_ver_code"));
+                        update.setVersionName(jsonObject1.optString("update_ver_name"));
+                        update.setUpdateContent(jsonObject1.optString("update_content"));
+                        update.setForced(false);
+                        update.setIgnore(jsonObject1.optBoolean("ignore_able",true));
+                        update.setMd5(jsonObject1.optString("md5"));
+                        */
+
                         return update;
                     }
                 })
@@ -86,7 +106,7 @@ public class MyApplication extends Application {
                 .setFileCreator(new FileCreator() {
                     @Override
                     public File create(String versionName) {
-                        // TODO: 2018/6/11 versionName 为解析的Update实例中的update_url数据。在些可自定义下载文件缓存路径及文件名。放置于File中
+                        // TODO: 2018/6/11 解析的Update实例中的update_url数据。在此可自定义下载文件缓存路径及文件名。放置于File中
                         return null;
                     }
                 })

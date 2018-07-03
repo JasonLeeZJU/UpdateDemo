@@ -27,6 +27,8 @@ import org.json.JSONObject;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import rx.functions.Action1;
+import com.jason.framework.updatedemo.updateAddress;
+
 
 public class BaseActivity extends Activity {
 
@@ -93,20 +95,24 @@ public class BaseActivity extends Activity {
         return UpdateConfig.createConfig()
                 // .setUrl("https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/update.json")
                 //  .setUrl("https://rawgit.com/JasonLeeZJU/UpdateDemo/master/update.json")
-                .setUrl("http://192.168.15.36/Update/update.json")
+                .setUrl(updateAddress.getUpdate_json_json_address())
                 .setUpdateParser(new UpdateParser() {
             @Override
             public Update parse(String httpResponse) throws Exception {
                 JSONObject jsonObject = new JSONObject(httpResponse);
                 Update update = new Update();
 
-                update.setUpdateUrl(jsonObject.optString("update_url"));
-                update.setVersionCode(jsonObject.optInt("update_ver_code"));
-                update.setVersionName(jsonObject.optString("update_ver_name"));
-                update.setUpdateContent(jsonObject.optString("update_content"));
-                update.setForced(false);
-                update.setIgnore(jsonObject.optBoolean("ignore_able",true));
-                update.setMd5(jsonObject.optString("md5"));
+            /*
+            JSONObject jsonObject1 = jsonObject.getJSONArray(updateAddress.getUpdate_json_field_name()).getJSONObject(updateAddress
+                        .getUpdate_json_field_index());
+            update.setUpdateUrl(jsonObject1.optString("update_url"));
+            update.setVersionCode(jsonObject1.optInt("update_ver_code"));
+            update.setVersionName(jsonObject1.optString("update_ver_name"));
+            update.setUpdateContent(jsonObject1.optString("update_content"));
+            update.setForced(false);
+            update.setIgnore(jsonObject1.optBoolean("ignore_able",true));
+            update.setMd5(jsonObject1.optString("md5"));
+            */
 
                 return update;
             }
