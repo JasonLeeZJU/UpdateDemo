@@ -1,8 +1,8 @@
-{
-  "update_url"      : "https://raw.githubusercontent.com/yjfnypeu/UpdatePlugin/master/update_plugin.apk",
-  "update_content"  : "你有新的版本需要更新",
-  "update_ver_code" : 10,
-  "update_ver_name" : "10.00",
-  "ignore_able"     : true,
-  "md5"             : "211117732C307BEA1188965E6CA41443"
+﻿{
+	"update_ver_name": "5.0",
+	"update_ver_code": 5,
+	"update_content": "修复多项BUG！",
+	"update_url": "https://raw.githubusercontent.com/JasonLeeZJU/UpdateDemo/master/app-release-5.0.apk",
+	"ignore_able": true,
+	"md5":"BCA11859490E9CFFF807DFB8B5C684E8"
 }
